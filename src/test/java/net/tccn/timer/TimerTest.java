@@ -26,7 +26,7 @@ public class TimerTest {
     /**
      * 启动定时器测试，
      */
-    //@Test
+    @Test
     public void t2() throws InterruptedException {
         TimerExecutor timerExecutor = new TimerExecutor(1);
         //Task t1 = new TaskImpl("a1", new ScheduledExpres("1-40 * * * *"));//1-40，定时每分钟执行
@@ -290,7 +290,7 @@ public class TimerTest {
             }
         }).start();
 
-        new Thread(() ->{
+        new Thread(() -> {
             while (true) {
                 lock.lock();
                 if (list.isEmpty()) {
